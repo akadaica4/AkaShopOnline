@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.13" />
+	  <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AkaShop.Data\AkaShop.Data.csproj" />
+    <ProjectReference Include="..\AkaShop.Utilities\AkaShop.Utilities.csproj" />
+    <ProjectReference Include="..\AkaShop.ViewModel\AkaShop.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\bin\Debug\netcoreapp3.1\AkaShop.Data.deps.json
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\bin\Debug\netcoreapp3.1\AkaShop.Data.runtimeconfig.json
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\bin\Debug\netcoreapp3.1\AkaShop.Data.runtimeconfig.dev.json
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\bin\Debug\netcoreapp3.1\AkaShop.Data.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\bin\Debug\netcoreapp3.1\AkaShop.Data.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\obj\Debug\netcoreapp3.1\AkaShop.Data.csproj.AssemblyReference.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\obj\Debug\netcoreapp3.1\AkaShop.Data.AssemblyInfoInputs.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\obj\Debug\netcoreapp3.1\AkaShop.Data.AssemblyInfo.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\obj\Debug\netcoreapp3.1\AkaShop.Data.csproj.CoreCompileInputs.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\obj\Debug\netcoreapp3.1\AkaShop.Data.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\obj\Debug\netcoreapp3.1\AkaShop.Data.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Data\obj\Debug\netcoreapp3.1\AkaShop.Data.genruntimeconfig.cache

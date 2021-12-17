@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ow3vBgHpGRSBrzAGoOxSG43Xc+QifnxiZWa5oqDPW6v2XM5qgyPqmnCsNGCTOf8qwDq9NdX3T6HknQLgSw6YBg==",
+  "success": true,
+  "projectFilePath": "D:\\ProjectSolo\\AkaShopOnline\\AkaShop.WebApp\\AkaShop.ViewModel\\AkaShop.ViewModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.13\\microsoft.aspnetcore.http.features.5.0.13.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

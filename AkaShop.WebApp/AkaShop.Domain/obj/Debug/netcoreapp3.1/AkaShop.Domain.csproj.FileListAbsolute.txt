@@ -1,0 +1,16 @@
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.Domain.deps.json
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.Domain.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.Domain.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\obj\Debug\netcoreapp3.1\AkaShop.Domain.csproj.AssemblyReference.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\obj\Debug\netcoreapp3.1\AkaShop.Domain.AssemblyInfoInputs.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\obj\Debug\netcoreapp3.1\AkaShop.Domain.AssemblyInfo.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\obj\Debug\netcoreapp3.1\AkaShop.Domain.csproj.CoreCompileInputs.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\obj\Debug\netcoreapp3.1\AkaShop.Domain.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\obj\Debug\netcoreapp3.1\AkaShop.Domain.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.Data.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.Utilities.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.Data.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.Utilities.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\obj\Debug\netcoreapp3.1\AkaShop.Domain.csproj.CopyComplete
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.ViewModel.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.Domain\bin\Debug\netcoreapp3.1\AkaShop.ViewModel.pdb
