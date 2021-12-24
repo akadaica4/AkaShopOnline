@@ -3,7 +3,6 @@ using AkaShop.Data.EntityFramework;
 using AkaShop.Domain.Common;
 using AkaShop.Utilities.Exceptions;
 using AkaShop.ViewModel.Catalog.Products;
-using AkaShop.ViewModel.Catalog.Products.Manage;
 using AkaShop.ViewModel.Catalog.Products.ProductImages;
 using AkaShop.ViewModel.Common;
 using Microsoft.AspNetCore.Http;
@@ -96,7 +95,8 @@ namespace AkaShop.Domain.Catalog.Products
                 };
             }
             context.Products.Add(product);
-            return await context.SaveChangesAsync();
+            await context.SaveChangesAsync();
+            return product.Id;
         }
 
         public async Task<int> Delete(int productId)
@@ -115,7 +115,7 @@ namespace AkaShop.Domain.Catalog.Products
             return await context.SaveChangesAsync();
         }
 
-        public async Task<PageResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
+        public async Task<PageResult<ProductViewModel>> GetAllPaging(GetManageProductPaginRequest request)
         {
             //1.Select join
             var query = from p in context.Products
@@ -128,9 +128,9 @@ namespace AkaShop.Domain.Catalog.Products
             {
                 query = query.Where(x => x.pt.Name.Contains(request.Keyword));
             }
-            if(request.CategoryId.Count > 0)
+            if(request.CategoryIds.Count > 0)
             {
-                query = query.Where(p => request.CategoryId.Contains(p.pic.CategoryId));
+                query = query.Where(p => request.CategoryIds.Contains(p.pic.CategoryId));
             }
             //3.Paging
             int totalRow = await query.CountAsync();
@@ -162,8 +162,8 @@ namespace AkaShop.Domain.Catalog.Products
 
         public async Task<List<ProductImageViewModel>> GetListImage(int productId)
         {
-            return await context.ProductImages.Where(x => x.ProductId == productId)
-                .Select(i => new ProductImageViewModel()
+            return await context.ProductImages.Where(x => x.ProductId == productId).Select(i => 
+                new ProductImageViewModel()
                 {
                     Caption = i.Caption,
                     DateCreated = i.DateCreate,
@@ -266,7 +266,7 @@ namespace AkaShop.Domain.Catalog.Products
             var image = await context.ProductImages.FindAsync(imageId);
             if(image == null)
             {
-                throw new AkaShopException($"Không thể tìm thấy hình ảnh có id {imageId}");
+                throw new AkaShopException($"Không thể tìm thấy hình ảnh có Id {imageId}");
             }
             var viewModel = new ProductImageViewModel()
             {
@@ -280,6 +280,30 @@ namespace AkaShop.Domain.Catalog.Products
                 SortOrder = image.SortOrder
             };
             return viewModel;
+        }
+
+        public async Task<ProductViewModel> GetById(int productId, string languageId)
+        {
+            var product = await context.Products.FindAsync(productId);
+            var productTranslation = await context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == productId && x.LanguageId == x.LanguageId);
+
+            var productViewModel = new ProductViewModel()
+            {
+                Id = product.Id,
+                DateCreated = product.DateCreated,
+                Description = productTranslation != null ? productTranslation.Description : null,
+                LanguageId = productTranslation.LanguageId,
+                Details = productTranslation != null ? productTranslation.Details : null,
+                Name = productTranslation != null ? productTranslation.Name : null,
+                OriginalPrice = product.OriginalPrice,
+                Price = product.Price,
+                SeoAlias = productTranslation != null ? productTranslation.SeoAlias : null,
+                SeoDescription = productTranslation != null ? productTranslation.SeoDescription : null,
+                SeoTitle = productTranslation != null ? productTranslation.SeoTitle : null,
+                Stock = product.Stock,
+                ViewCount = product.ViewCount
+            };
+            return productViewModel;
         }
     }
 }

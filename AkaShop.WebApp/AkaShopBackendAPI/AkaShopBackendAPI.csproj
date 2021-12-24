@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AkaShop.Data\AkaShop.Data.csproj" />
+    <ProjectReference Include="..\AkaShop.Domain\AkaShop.Domain.csproj" />
+    <ProjectReference Include="..\AkaShop.Utilities\AkaShop.Utilities.csproj" />
+    <ProjectReference Include="..\AkaShop.ViewModel\AkaShop.ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\user-content\" />
+  </ItemGroup>
+
+</Project>

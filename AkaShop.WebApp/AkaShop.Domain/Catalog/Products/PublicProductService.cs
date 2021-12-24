@@ -7,7 +7,6 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using AkaShop.ViewModel.Catalog.Products;
 using AkaShop.ViewModel.Common;
-using AkaShop.ViewModel.Catalog.Products.Public;
 
 namespace AkaShop.Domain.Catalog.Products
 {
@@ -19,13 +18,14 @@ namespace AkaShop.Domain.Catalog.Products
         {
             this.context = context;
         }
-        public async Task<PageResult<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request)
+        public async Task<PageResult<ProductViewModel>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request)
         {
             //1.Select join
             var query = from p in context.Products
                         join pt in context.ProductTranslations on p.Id equals pt.ProductId
                         join pic in context.ProductInCategories on p.Id equals pic.ProductId
                         join c in context.Categories on pic.CategoryId equals c.Id
+                        where pt.LanguageId == languageId
                         select new { p, pt, pic };
             //2.Filter
             if (request.CategoryId.HasValue && request.CategoryId.Value > 0)
