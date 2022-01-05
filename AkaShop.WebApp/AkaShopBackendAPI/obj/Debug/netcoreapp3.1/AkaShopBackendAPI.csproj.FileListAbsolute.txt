@@ -84,3 +84,7 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShopBackendAPI\bin\Debug\netcorea
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShopBackendAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShopBackendAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShopBackendAPI\obj\Debug\netcoreapp3.1\AkaShopBackendAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShopBackendAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShopBackendAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShopBackendAPI\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShopBackendAPI\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll

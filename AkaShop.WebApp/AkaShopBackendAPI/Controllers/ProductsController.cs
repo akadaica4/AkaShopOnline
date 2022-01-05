@@ -1,6 +1,7 @@
 ﻿using AkaShop.Domain.Catalog.Products;
 using AkaShop.ViewModel.Catalog.Products;
 using AkaShop.ViewModel.Catalog.Products.ProductImages;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +13,7 @@ namespace AkaShopBackendAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IPublicProductService publicProductService;

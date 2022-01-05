@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ow3vBgHpGRSBrzAGoOxSG43Xc+QifnxiZWa5oqDPW6v2XM5qgyPqmnCsNGCTOf8qwDq9NdX3T6HknQLgSw6YBg==",
+  "dgSpecHash": "Xt9UYi15HoRb6dU4V8WOUPVisKY+AxVwYnv1j8K5VTcAa2ifRmFHOD0VmO9mQJ/J2BCFPkAiEG1rYGh7g1xHDw==",
   "success": true,
   "projectFilePath": "D:\\ProjectSolo\\AkaShopOnline\\AkaShop.WebApp\\AkaShop.ViewModel\\AkaShop.ViewModel.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.13\\microsoft.aspnetcore.http.features.5.0.13.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",

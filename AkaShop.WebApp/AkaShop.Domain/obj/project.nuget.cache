@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8bwM4oiBjxmkfrmQQk9exuiqAIvXlvyYgC2fZ9VmWgIvWEDukrCptYgdPRecmVhWSPDx6EnXWVt5soB8j0j6lg==",
+  "dgSpecHash": "jjL+KeGTrLDKg9FcPKQ9Uu2WD1wZlm9K6fC01tHnKOtWr8P18RXodzu7DqFXM1IStqifixK0PPIsnOEa2oX1ag==",
   "success": true,
   "projectFilePath": "D:\\ProjectSolo\\AkaShopOnline\\AkaShop.WebApp\\AkaShop.Domain\\AkaShop.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.22\\microsoft.aspnetcore.cryptography.internal.3.1.22.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.22\\microsoft.aspnetcore.cryptography.keyderivation.3.1.22.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.13\\microsoft.aspnetcore.http.features.5.0.13.nupkg.sha512",
