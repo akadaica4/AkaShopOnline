@@ -12,6 +12,7 @@ namespace AkaShopBackendAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UsersController : ControllerBase
     {
         private readonly IUserService userService;
@@ -36,7 +37,7 @@ namespace AkaShopBackendAPI.Controllers
             return Ok(resultToken);
         }
 
-        [HttpPost("register")]
+        [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] RegisterRequest request)
         {
@@ -50,6 +51,15 @@ namespace AkaShopBackendAPI.Controllers
                 return BadRequest("Đăng ký không thành công.");
             }
             return Ok();
+        }
+
+        //http://localhost/api/user/paging?pageIndex=1&pageSize=10&keyword=?
+        [HttpGet("paging")]
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetUserPagingRequest request)
+        {
+
+            var users = await userService.GetUserPaging(request);
+            return Ok(users);
         }
     }
 }

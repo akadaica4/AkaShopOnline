@@ -1,4 +1,5 @@
-﻿using AkaShop.ViewModel.System.Users;
+﻿using AkaShop.ViewModel.Common;
+using AkaShop.ViewModel.System.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,5 +11,7 @@ namespace AkaShop.Domain.System.Users
     {
         Task<string> Authencate(LoginRequest request);
         Task<bool> Register(RegisterRequest request);
+
+        Task<PageResult<UserViewModel>> GetUserPaging(GetUserPagingRequest request);
     }
 }

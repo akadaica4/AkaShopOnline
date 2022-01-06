@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AkaShop.Domain.Catalog.Products
 {
-    public interface IManageProductService
+    public interface IProductService
     {
         Task<int> Create(ProductCreateRequest request);
         Task<int> Update(ProductUpdateRequest request);
@@ -24,5 +24,7 @@ namespace AkaShop.Domain.Catalog.Products
         Task<int> UpdateImages(int imageId, ProductImageUpdateRequest request);
         Task<List<ProductImageViewModel>> GetListImage(int productId);
         Task<ProductImageViewModel> GetImageById(int imageId);
+        Task<PageResult<ProductViewModel>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request);
+
     }
 }
