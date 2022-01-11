@@ -406,3 +406,11 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreap
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\User\Create.cshtml.g.cs
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\User\Edit.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\User\Details.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Pager\Default.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\User\Delete.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\User\RoleAssign.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreapp3.1\AkaShop.Utilities.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreapp3.1\AkaShop.Utilities.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Navigation\Default.cshtml.g.cs

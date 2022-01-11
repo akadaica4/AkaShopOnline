@@ -9,10 +9,16 @@ namespace AkaShop.AdminApp.Services
 {
     public interface IUserApiClient
     {
-        Task<string> Authenticate(LoginRequest request);
+        Task<ApiResult<string>> Authenticate(LoginRequest request);
 
-        Task<PageResult<UserViewModel>> GetUsersPaging(GetUserPagingRequest request);
+        Task<ApiResult<PageResult<UserViewModel>>> GetUsersPaging(GetUserPagingRequest request);
 
-        Task<bool> RegisterUser(RegisterRequest request);
+        Task<ApiResult<bool>> RegisterUser(RegisterRequest request);
+
+        Task<ApiResult<bool>> UpdateUser(Guid id, UserUpdateRequest request);
+        Task<ApiResult<UserViewModel>> GetById(Guid id);
+        Task<ApiResult<bool>> Delete(Guid id);
+
+        Task<ApiResult<bool>> RoleAssign(Guid id, RoleAssignRequest request);
     }
 }

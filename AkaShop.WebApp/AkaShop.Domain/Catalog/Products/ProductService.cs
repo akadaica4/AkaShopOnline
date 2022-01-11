@@ -154,7 +154,9 @@ namespace AkaShop.Domain.Catalog.Products
             //4.Select and projection
             var pageResult = new PageResult<ProductViewModel>()
             {
-                TotalRecord = totalRow,
+                TotalRecords = totalRow,
+                PageIndex = request.PageIndex,
+                PageSize = request.PageSize,
                 Items = data
             };
             return pageResult;
@@ -342,8 +344,10 @@ namespace AkaShop.Domain.Catalog.Products
             //4.Select and projection
             var pageResult = new PageResult<ProductViewModel>()
             {
-                TotalRecord = totalRow,
-                Items = data
+                TotalRecords = totalRow,
+                PageSize = request.PageSize,
+                PageIndex = request.PageIndex,
+                Items = data,
             };
             return pageResult;
         }

@@ -1,4 +1,5 @@
 ﻿using AkaShop.AdminApp.Services;
+using AkaShop.Utilities.Constants;
 using AkaShop.ViewModel.System.Users;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -41,15 +42,20 @@ namespace AkaShop.AdminApp.Controllers
             {
                 return View(ModelState);
             }
-            var token = await userApiClient.Authenticate(request);
-
-            var userPrincipal = this.ValidateToken(token);
+            var result = await userApiClient.Authenticate(request);
+            if(result.ResultObj == null)
+            {
+                ModelState.AddModelError("",result.Message);
+                return View();
+            }
+            var userPrincipal = this.ValidateToken(result.ResultObj);
             var authProperties = new AuthenticationProperties
             {
                 ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
                 IsPersistent = false
             };
-            HttpContext.Session.SetString("Token", token);
+            HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, configuration[SystemConstants.AppSettings.DefaultLanguageId]);
+            HttpContext.Session.SetString(SystemConstants.AppSettings.Token, result.ResultObj);
             await HttpContext.SignInAsync(
                         CookieAuthenticationDefaults.AuthenticationScheme,
                         userPrincipal,

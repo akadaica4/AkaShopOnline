@@ -1,5 +1,7 @@
 ﻿using AkaShop.AdminApp.Models;
+using AkaShop.Utilities.Constants;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -10,8 +12,7 @@ using System.Threading.Tasks;
 
 namespace AkaShop.AdminApp.Controllers
 {
-    [Authorize]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -35,6 +36,12 @@ namespace AkaShop.AdminApp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        [HttpPost]
+        public IActionResult Language(NavigationViewModel navigationViewModel)
+        {
+            HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, navigationViewModel.CurrenLangugeId);
+            return RedirectToAction("Index");
         }
     }
 }
