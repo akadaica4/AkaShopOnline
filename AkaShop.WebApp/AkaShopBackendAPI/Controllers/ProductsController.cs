@@ -22,13 +22,14 @@ namespace AkaShopBackendAPI.Controllers
         {
             this.productService = productService;
         }
-        //http://localhost:port/products?pageIndex=1&pageSize=10&CaegoryId=1
-        [HttpGet("public-paging/{languageId}")]
-        public async Task<IActionResult> GetAllPaging(string languageId ,[FromQuery]GetPublicProductPagingRequest request)
+
+        [HttpGet("paging")]
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetManageProductPaginRequest request)
         {
-            var product = await productService.GetAllByCategoryId(languageId, request);
+            var product = await productService.GetAllPaging(request);
             return Ok(product);
         }
+
         //http://localhost:port/product/1
         [HttpGet("{productId}/{languageId}")]
         public async Task<IActionResult> GetById(int productId, string languageId)
@@ -42,6 +43,7 @@ namespace AkaShopBackendAPI.Controllers
         }
 
         [HttpPost]
+        [Consumes("multipart/form-data")]
         public async Task<IActionResult> Create([FromForm]ProductCreateRequest request)
         {
             if (!ModelState.IsValid)
@@ -151,6 +153,21 @@ namespace AkaShopBackendAPI.Controllers
                 return BadRequest("Không tìm thấy sản phẩm");
             }
             return Ok(image);
+        }
+
+        [HttpPut("{id}/categories")]
+        public async Task<IActionResult> CategoryAssign(int id, [FromBody] CategoryAssignRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var result = await productService.CategoryAssign(id, request);
+            if (!result.IsSuccessed)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
         }
     }
 }

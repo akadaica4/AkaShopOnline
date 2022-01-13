@@ -414,3 +414,6 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreap
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreapp3.1\AkaShop.Utilities.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreapp3.1\AkaShop.Utilities.pdb
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Navigation\Default.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\CategoryAssign.cshtml.g.cs

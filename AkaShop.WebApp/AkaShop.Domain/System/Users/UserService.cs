@@ -164,7 +164,7 @@ namespace AkaShop.Domain.System.Users
                 return new ApiErrorResult<bool>("Tài khoản không tồn tại");
             }
             var removedRole = request.Roles.Where(x => x.Selected == false).Select(x=>x.Name).ToList();
-            await userManager.RemoveFromRolesAsync(user, removedRole);
+            
             foreach (var roleName in removedRole)
             {
                 if (await userManager.IsInRoleAsync(user, roleName) == true)
@@ -172,7 +172,7 @@ namespace AkaShop.Domain.System.Users
                     await userManager.RemoveFromRoleAsync(user, roleName);
                 }
             }
-
+            await userManager.RemoveFromRolesAsync(user, removedRole);
             var addedRoles = request.Roles.Where(x => x.Selected).Select(x => x.Name).ToList();
             foreach(var roleName in addedRoles)
             {

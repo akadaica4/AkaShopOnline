@@ -1,5 +1,6 @@
 using AkaShop.Data.Entities;
 using AkaShop.Data.EntityFramework;
+using AkaShop.Domain.Catalog.Categories;
 using AkaShop.Domain.Catalog.Products;
 using AkaShop.Domain.Common;
 using AkaShop.Domain.System.Languages;
@@ -50,6 +51,7 @@ namespace AkaShopBackendAPI
             services.AddTransient<ILanguageService, LanguageService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IValidator<LoginRequest>, LoginRequestValidator>();
             services.AddTransient<IValidator<RegisterRequest>, RegisterRequestValidator>();
 

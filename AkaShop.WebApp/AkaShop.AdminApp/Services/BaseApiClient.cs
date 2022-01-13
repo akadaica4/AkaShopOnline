@@ -41,5 +41,25 @@ namespace AkaShop.AdminApp.Services
             return JsonConvert.DeserializeObject<TResponse>(body);
         }
 
+
+        public async Task<List<T>> GetListAsync<T>(string url, bool requiredLogin = false)
+        {
+            var sessions = httpContextAccessor
+               .HttpContext
+               .Session
+               .GetString(SystemConstants.AppSettings.Token);
+            var client = httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+            var response = await client.GetAsync(url);
+            var body = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {
+                var data = (List<T>)JsonConvert.DeserializeObject(body, typeof(List<T>));
+                return data;
+            }
+            throw new Exception(body);
+        }
     }
 }

@@ -79,7 +79,7 @@ namespace AkaShop.Domain.Catalog.Products
                 }
             };
             //Save Image
-            if(request.ThumnailImage != null)
+            if(request.ThumbnailImage != null)
             {
                 product.ProductImages = new List<ProductImage>()
                 {
@@ -87,8 +87,8 @@ namespace AkaShop.Domain.Catalog.Products
                     {
                         Caption = "Thumbnail image",
                         DateCreate = DateTime.Now,
-                        FileSize = request.ThumnailImage.Length,
-                        ImagePath = await this.SaveFile(request.ThumnailImage),
+                        FileSize = request.ThumbnailImage.Length,
+                        ImagePath = await this.SaveFile(request.ThumbnailImage),
                         IsDefault = true,
                         SortOrder = 1
                     }
@@ -120,18 +120,22 @@ namespace AkaShop.Domain.Catalog.Products
             //1.Select join
             var query = from p in context.Products
                         join pt in context.ProductTranslations on p.Id equals pt.ProductId
-                        join pic in context.ProductInCategories on p.Id equals pic.ProductId
-                        join c in context.Categories on pic.CategoryId equals c.Id
+                        join pic in context.ProductInCategories on p.Id equals pic.ProductId into ppic
+                        from pic in ppic.DefaultIfEmpty()
+                        join c in context.Categories on pic.CategoryId equals c.Id into picc
+                        from c in picc.DefaultIfEmpty()
+                        where pt.LanguageId == request.LanguageId
                         select new { p, pt, pic };
             //2.Filter
             if (!string.IsNullOrEmpty(request.Keyword))
             {
                 query = query.Where(x => x.pt.Name.Contains(request.Keyword));
             }
-            if(request.CategoryIds.Count > 0)
+            if (request.CategoryId != null && request.CategoryId != 0)
             {
-                query = query.Where(p => request.CategoryIds.Contains(p.pic.CategoryId));
+                query = query.Where(p => p.pic.CategoryId == request.CategoryId);
             }
+
             //3.Paging
             int totalRow = await query.CountAsync();
             var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
@@ -287,7 +291,13 @@ namespace AkaShop.Domain.Catalog.Products
         public async Task<ProductViewModel> GetById(int productId, string languageId)
         {
             var product = await context.Products.FindAsync(productId);
-            var productTranslation = await context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == productId && x.LanguageId == x.LanguageId);
+            var productTranslation = await context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == productId && x.LanguageId == languageId);
+
+            var categories = await (from c in context.Categories
+                             join ct in context.CategoryTranslations on c.Id equals ct.CategoryId
+                             join pic in context.ProductInCategories on c.Id equals pic.CategoryId
+                             where pic.ProductId == productId && ct.LanguageId == languageId
+                             select ct.Name).ToListAsync();
 
             var productViewModel = new ProductViewModel()
             {
@@ -303,7 +313,8 @@ namespace AkaShop.Domain.Catalog.Products
                 SeoDescription = productTranslation != null ? productTranslation.SeoDescription : null,
                 SeoTitle = productTranslation != null ? productTranslation.SeoTitle : null,
                 Stock = product.Stock,
-                ViewCount = product.ViewCount
+                ViewCount = product.ViewCount,
+                Categories = categories
             };
             return productViewModel;
         }
@@ -350,6 +361,33 @@ namespace AkaShop.Domain.Catalog.Products
                 Items = data,
             };
             return pageResult;
+        }
+
+        public async Task<ApiResult<bool>> CategoryAssign(int id, CategoryAssignRequest request)
+        {
+            var product = await context.Products.FindAsync(id);
+            if (product == null)
+            {
+                return new ApiErrorResult<bool>($"sản phẩm với {id} không tồn tại");
+            }
+            foreach (var category in request.Categories)
+            {
+                var productInCategory = await context.ProductInCategories.FirstOrDefaultAsync(x=>x.CategoryId == int.Parse(category.Id) && x.ProductId == id);
+                if(productInCategory != null && category.Selected == false)
+                {
+                     context.ProductInCategories.Remove(productInCategory);
+                }
+                else if(productInCategory == null && category.Selected)
+                {
+                    await context.ProductInCategories.AddAsync(new ProductInCategory() 
+                    { 
+                        CategoryId = int.Parse(category.Id),
+                        ProductId = id
+                    });
+                }
+            }
+            await context.SaveChangesAsync();
+            return new ApiSuccessResult<bool>();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AkaShop.ViewModel.Catalog.Categories;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -19,5 +20,7 @@ namespace AkaShop.ViewModel.Catalog.Products
         public string SeoTitle { get; set; }
         public string SeoAlias { get; set; }
         public string LanguageId { get; set; }
+
+        public List<string> Categories { get; set; } = new List<string>();
     }
 }
