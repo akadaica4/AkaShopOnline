@@ -1,4 +1,5 @@
-﻿using AkaShop.Utilities.Constants;
+﻿using AkaShop.AdminApp.Services;
+using AkaShop.Utilities.Constants;
 using AkaShop.ViewModel.Catalog.Products;
 using AkaShop.ViewModel.Common;
 using Microsoft.AspNetCore.Http;
@@ -89,7 +90,7 @@ namespace AkaShop.AdminApp.Services
 
         public async Task<ProductViewModel> GetById(int id, string languageId)
         {
-            var data = await GetAsync<ProductViewModel>($"/api/products/={id}/{languageId}");
+            var data = await GetAsync<ProductViewModel>($"/api/products/{id}/{languageId}");
             return data;
         }
 

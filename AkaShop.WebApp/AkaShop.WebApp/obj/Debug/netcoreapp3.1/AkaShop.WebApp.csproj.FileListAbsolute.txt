@@ -351,3 +351,15 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Primitives.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\refs\System.Collections.Immutable.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.DiagnosticSource.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\appsettings.Production.json
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\en\AkaShop.WebApp.resources.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\vi\AkaShop.WebApp.resources.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\LazZiya.ExpressLocalization.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\LazZiya.TagHelpers.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\AkaShop.WebApp.LocalizationResources.ExpressLocalizationResource.en.resources
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\AkaShop.WebApp.LocalizationResources.ExpressLocalizationResource.vi.resources
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\AkaShop.WebApp.LocalizationResources.ViewLocalizationResource.en.resources
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\AkaShop.WebApp.LocalizationResources.ViewLocalizationResource.vi.resources
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\AkaShop.WebApp.csproj.GenerateResource.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\en\AkaShop.WebApp.resources.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\vi\AkaShop.WebApp.resources.dll

@@ -1,0 +1,4 @@
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BackendApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BackendApiIntegration.csproj.AssemblyReference.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BackendApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BackendApiIntegration.AssemblyInfoInputs.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BackendApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BackendApiIntegration.AssemblyInfo.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BackendApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BackendApiIntegration.csproj.CoreCompileInputs.cache

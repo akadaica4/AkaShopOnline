@@ -1,10 +1,8 @@
-﻿using AkaShop.ViewModel.Catalog.Categories;
-using AkaShop.ViewModel.Common;
+﻿using AkaShop.AdminApp.Services;
+using AkaShop.ViewModel.Catalog.Categories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -12,13 +10,15 @@ namespace AkaShop.AdminApp.Services
 {
     public class CategoryApiClient : BaseApiClient, ICategoryApiClient
     {
+        private readonly IConfiguration configuration;
+
         public CategoryApiClient(IHttpClientFactory httpClientFactory,
                                  IConfiguration configuration,
                                  IHttpContextAccessor httpContextAccessor)
                                  : base(httpClientFactory, configuration, httpContextAccessor)
 
         {
-
+            this.configuration = configuration;
         }
         public async Task<List<CategoryViewModel>> GetAll(string languageId)
         {

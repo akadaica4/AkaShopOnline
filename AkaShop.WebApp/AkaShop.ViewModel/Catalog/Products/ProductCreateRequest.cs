@@ -12,7 +12,7 @@ namespace AkaShop.ViewModel.Catalog.Products
         [Required(ErrorMessage = "Bạn phải nhập tên sản phẩm")]
         public string Name { get; set; }
         [Display(Name = "Giá sản phẩm")]
-        [Required(ErrorMessage = "Bạn phải nhập Giá sản phẩm")]
+        [Required(ErrorMessage ="Bạn phải nhập giá sản phẩm")]
         public decimal Price { get; set; }
         [Display(Name = "Giá gốc")]
         [Required(ErrorMessage = "Bạn phải nhập giá gốc")]
