@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Hosts", "3.Hosts", "{5553
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkaShop.AdminApp", "AkaShop.AdminApp\AkaShop.AdminApp.csproj", "{A42AC936-31AB-4E34-B7B6-61977EEF3CDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkaShop.BEApiIntegration", "AkaShop.BEApiIntegration\AkaShop.BEApiIntegration.csproj", "{EADEFD16-A69A-4DD0-81E8-7BE122FB7998}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{A42AC936-31AB-4E34-B7B6-61977EEF3CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A42AC936-31AB-4E34-B7B6-61977EEF3CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A42AC936-31AB-4E34-B7B6-61977EEF3CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EADEFD16-A69A-4DD0-81E8-7BE122FB7998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADEFD16-A69A-4DD0-81E8-7BE122FB7998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADEFD16-A69A-4DD0-81E8-7BE122FB7998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADEFD16-A69A-4DD0-81E8-7BE122FB7998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{C94B3332-6471-4571-9426-7ED16540636A} = {76BBACD2-ADC0-4002-9C8B-7B029AFE4BCE}
 		{616F8951-9954-4C5C-956B-6E0DC68F0376} = {5553819A-6000-45F5-83F4-478AA63B760E}
 		{A42AC936-31AB-4E34-B7B6-61977EEF3CDF} = {5553819A-6000-45F5-83F4-478AA63B760E}
+		{EADEFD16-A69A-4DD0-81E8-7BE122FB7998} = {5553819A-6000-45F5-83F4-478AA63B760E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38E5C4E1-A4EC-41A3-9915-E1F079165C98}

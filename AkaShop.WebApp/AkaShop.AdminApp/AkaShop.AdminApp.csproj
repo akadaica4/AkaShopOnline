@@ -19,6 +19,7 @@
   
 
   <ItemGroup>
+    <ProjectReference Include="..\AkaShop.BEApiIntegration\AkaShop.BEApiIntegration.csproj" />
     <ProjectReference Include="..\AkaShop.Utilities\AkaShop.Utilities.csproj" />
     <ProjectReference Include="..\AkaShop.ViewModel\AkaShop.ViewModel.csproj" />
   </ItemGroup>

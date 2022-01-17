@@ -1,5 +1,5 @@
-﻿using AkaShop.AdminApp.Services;
-using AkaShop.AdminApp.Models;
+﻿using AkaShop.AdminApp.Models;
+using AkaShop.BEApiIntegration;
 using AkaShop.Utilities.Constants;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

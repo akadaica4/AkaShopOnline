@@ -1,4 +1,4 @@
-﻿using AkaShop.AdminApp.Services;
+﻿using AkaShop.BEApiIntegration;
 using AkaShop.Utilities.Constants;
 using AkaShop.ViewModel.Catalog.Products;
 using AkaShop.ViewModel.Common;

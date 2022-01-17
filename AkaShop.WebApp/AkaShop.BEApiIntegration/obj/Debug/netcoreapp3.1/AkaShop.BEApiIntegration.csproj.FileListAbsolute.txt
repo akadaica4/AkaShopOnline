@@ -1,0 +1,14 @@
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.csproj.AssemblyReference.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.AssemblyInfoInputs.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.AssemblyInfo.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.csproj.CoreCompileInputs.cache
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.deps.json
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.Utilities.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.ViewModel.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.Utilities.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.ViewModel.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.csproj.CopyComplete
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.pdb
