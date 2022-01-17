@@ -86,7 +86,7 @@ namespace AkaShop.Data.Migrations
                         new
                         {
                             Id = new Guid("bafd3e3d-dfd1-44ad-a676-d1343f6e12cd"),
-                            ConcurrencyStamp = "6650743c-b496-44f7-9cbe-a73427063d45",
+                            ConcurrencyStamp = "2ace11c2-310a-4ede-aee3-af763a18c76c",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -176,7 +176,7 @@ namespace AkaShop.Data.Migrations
                         {
                             Id = new Guid("492bf905-00fa-4b70-bb97-63553b33f9fb"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "23ddc1eb-268d-4d80-bd89-7bfb40ac60fe",
+                            ConcurrencyStamp = "50a652c1-6161-403f-8dbf-78d446b98361",
                             Dob = new DateTime(1997, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "nhatnamtran100217@gmail.com",
                             EmailConfirmed = true,
@@ -185,7 +185,7 @@ namespace AkaShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "nhatnamtran100217@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKYz+4MMZAJIxwaRhQQzn+SOW9i8nCMlOyzeCuxSCr3c4rRQjP2HHkqO0iDZqciMyQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMMt0Ll2ij703qDxAyYcQyN6Jcl1Jk116zHlYJfjveEKFk/j39bQlM94/YXSvt9u1Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -504,6 +504,9 @@ namespace AkaShop.Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool?>("IsFeatured")
+                        .HasColumnType("bit");
+
                     b.Property<decimal>("OriginalPrice")
                         .HasColumnType("decimal(18,2)");
 
@@ -528,7 +531,7 @@ namespace AkaShop.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 12, 17, 10, 56, 52, 182, DateTimeKind.Local).AddTicks(3407),
+                            DateCreated = new DateTime(2022, 1, 17, 9, 11, 3, 220, DateTimeKind.Local).AddTicks(3137),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
@@ -714,6 +717,108 @@ namespace AkaShop.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Promotions");
+                });
+
+            modelBuilder.Entity("AkaShop.Data.Entities.Slide", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Slides");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                            Image = "/themes/images/carousel/1.png",
+                            Name = "Second Thumbnail label",
+                            SortOrder = 1,
+                            Status = 1,
+                            Url = "#"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                            Image = "/themes/images/carousel/2.png",
+                            Name = "Second Thumbnail label",
+                            SortOrder = 2,
+                            Status = 1,
+                            Url = "#"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                            Image = "/themes/images/carousel/3.png",
+                            Name = "Second Thumbnail label",
+                            SortOrder = 3,
+                            Status = 1,
+                            Url = "#"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                            Image = "/themes/images/carousel/4.png",
+                            Name = "Second Thumbnail label",
+                            SortOrder = 4,
+                            Status = 1,
+                            Url = "#"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                            Image = "/themes/images/carousel/5.png",
+                            Name = "Second Thumbnail label",
+                            SortOrder = 5,
+                            Status = 1,
+                            Url = "#"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                            Image = "/themes/images/carousel/6.png",
+                            Name = "Second Thumbnail label",
+                            SortOrder = 6,
+                            Status = 1,
+                            Url = "#"
+                        });
                 });
 
             modelBuilder.Entity("AkaShop.Data.Entities.Transaction", b =>

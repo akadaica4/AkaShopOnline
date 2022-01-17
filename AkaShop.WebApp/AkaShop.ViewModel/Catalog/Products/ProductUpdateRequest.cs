@@ -15,6 +15,8 @@ namespace AkaShop.ViewModel.Catalog.Products
         public string SeoTitle { get; set; }
         public string SeoAlias { get; set; }
         public string LanguageId { get; set; }
+
+        public bool? IsFeatured { get; set; }
         public IFormFile ThumnailImage { get; set; }
     }
 }
