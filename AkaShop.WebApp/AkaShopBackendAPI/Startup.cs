@@ -6,6 +6,7 @@ using AkaShop.Domain.Common;
 using AkaShop.Domain.System.Languages;
 using AkaShop.Domain.System.Roles;
 using AkaShop.Domain.System.Users;
+using AkaShop.Domain.Utilities.Slides;
 using AkaShop.Utilities.Constants;
 using AkaShop.ViewModel.System.Users;
 using FluentValidation;
@@ -54,7 +55,7 @@ namespace AkaShopBackendAPI
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IValidator<LoginRequest>, LoginRequestValidator>();
             services.AddTransient<IValidator<RegisterRequest>, RegisterRequestValidator>();
-
+            services.AddTransient<ISlideService, SlideService>();
 
             services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
 

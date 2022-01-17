@@ -7,3 +7,6 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.ViewModel\obj\Debug\netcorea
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.ViewModel\obj\Debug\netcoreapp3.1\AkaShop.ViewModel.csproj.CoreCompileInputs.cache
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.ViewModel\obj\Debug\netcoreapp3.1\AkaShop.ViewModel.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.ViewModel\obj\Debug\netcoreapp3.1\AkaShop.ViewModel.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.ViewModel\bin\Debug\netcoreapp3.1\AkaShop.Data.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.ViewModel\bin\Debug\netcoreapp3.1\AkaShop.Data.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.ViewModel\obj\Debug\netcoreapp3.1\AkaShop.ViewModel.csproj.CopyComplete

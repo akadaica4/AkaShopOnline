@@ -1180,6 +1180,7 @@
       },
       "AkaShop.ViewModel/1.0.0": {
         "dependencies": {
+          "AkaShop.Data": "1.0.0",
           "FluentValidation": "10.3.6",
           "Microsoft.AspNetCore.Http.Features": "5.0.13"
         },

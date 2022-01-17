@@ -17,5 +17,8 @@ namespace AkaShop.BEApiIntegration
 
 
         Task<ProductViewModel> GetById(int id, string languageId);
+
+        Task<List<ProductViewModel>> GetFeaturedProducts( string languageId, int take);
+        Task<List<ProductViewModel>> GetLatestdProducts(string languageId, int take);
     }
 }

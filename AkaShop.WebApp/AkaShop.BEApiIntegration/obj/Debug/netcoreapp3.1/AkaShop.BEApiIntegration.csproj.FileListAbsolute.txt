@@ -12,3 +12,5 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\n
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.csproj.CopyComplete
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\obj\Debug\netcoreapp3.1\AkaShop.BEApiIntegration.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.Data.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.BEApiIntegration\bin\Debug\netcoreapp3.1\AkaShop.Data.pdb

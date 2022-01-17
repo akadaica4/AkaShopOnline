@@ -242,7 +242,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\ProjectSolo\\AkaShopOnline\\AkaShop.WebApp\\AkaShop.Data\\AkaShop.Data.csproj": {
+                "projectPath": "D:\\ProjectSolo\\AkaShopOnline\\AkaShop.WebApp\\AkaShop.Data\\AkaShop.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

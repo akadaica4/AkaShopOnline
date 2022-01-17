@@ -28,5 +28,9 @@ namespace AkaShop.Domain.Catalog.Products
 
         Task<ApiResult<bool>> CategoryAssign(int id, CategoryAssignRequest request);
 
+        Task<List<ProductViewModel>> GetFeaturedProducts(string languageId, int take);
+
+        Task<List<ProductViewModel>> GetLatestdProducts(string languageId, int take);
+
     }
 }

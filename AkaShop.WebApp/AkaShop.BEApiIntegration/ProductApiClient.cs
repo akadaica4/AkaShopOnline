@@ -94,6 +94,18 @@ namespace AkaShop.BEApiIntegration
             return data;
         }
 
+        public async Task<List<ProductViewModel>> GetFeaturedProducts(string languageId, int take)
+        {
+            var data = await GetListAsync<ProductViewModel>($"/api/products/featured/{languageId}/{take}");
+            return data;
+        }
+
+        public async Task<List<ProductViewModel>> GetLatestdProducts(string languageId, int take)
+        {
+            var data = await GetListAsync<ProductViewModel>($"/api/products/latest/{languageId}/{take}");
+            return data;
+        }
+
         public async Task<PageResult<ProductViewModel>> GetPaging(GetManageProductPaginRequest request)
         {
             var data = await GetAsync<PageResult<ProductViewModel>>
