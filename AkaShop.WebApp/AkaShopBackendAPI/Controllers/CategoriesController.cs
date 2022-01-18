@@ -24,5 +24,13 @@ namespace AkaShopBackendAPI.Controllers
             var category = await categoryService.GetAll(languageId);
             return Ok(category);
         }
+
+
+        [HttpGet("{id}/{languageId}")]
+        public async Task<IActionResult> GetById(string languageId,int id)
+        {
+            var category = await categoryService.GetById(languageId,id);
+            return Ok(category);
+        }
     }
 }

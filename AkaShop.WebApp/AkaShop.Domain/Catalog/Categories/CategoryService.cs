@@ -31,5 +31,20 @@ namespace AkaShop.Domain.Catalog.Categories
 
             }).ToListAsync();
         }
+
+        public async Task<CategoryViewModel> GetById(string languageId, int id)
+        {
+            var query = from c in context.Categories
+                        join ct in context.CategoryTranslations on c.Id equals ct.CategoryId
+                        where ct.LanguageId == languageId && c.Id == id
+                        select new { c, ct };
+            return await query.Select(x => new CategoryViewModel()
+            {
+                Id = x.c.Id,
+                Name = x.ct.Name,
+                ParentId = x.c.ParentId
+
+            }).FirstOrDefaultAsync();
+        }
     }
 }

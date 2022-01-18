@@ -10,5 +10,7 @@ namespace AkaShop.BEApiIntegration
     public interface ICategoryApiClient
     {
         Task<List<CategoryViewModel>> GetAll(string languageId);
+
+        Task<CategoryViewModel> GetById(string languageId, int id);
     }
 }

@@ -141,8 +141,10 @@ namespace AkaShop.Domain.Catalog.Products
                         from pic in ppic.DefaultIfEmpty()
                         join c in context.Categories on pic.CategoryId equals c.Id into picc
                         from c in picc.DefaultIfEmpty()
-                        where pt.LanguageId == request.LanguageId
-                        select new { p, pt, pic };
+                        join pi in context.ProductImages on p.Id equals pi.ProductId into ppi
+                        from pi in ppi.DefaultIfEmpty()
+                        where pt.LanguageId == request.LanguageId && pi.IsDefault == true
+                        select new { p, pt, pic,pi };
             //2.Filter
             if (!string.IsNullOrEmpty(request.Keyword))
             {
@@ -170,7 +172,8 @@ namespace AkaShop.Domain.Catalog.Products
                     SeoDescription = x.pt.SeoDescription,
                     SeoTitle = x.pt.SeoTitle,
                     Stock = x.p.Stock,
-                    ViewCount = x.p.ViewCount
+                    ViewCount = x.p.ViewCount,
+                    ThumbnailImge = x.pi.ImagePath
                 }).ToListAsync();
             //4.Select and projection
             var pageResult = new PageResult<ProductViewModel>()
