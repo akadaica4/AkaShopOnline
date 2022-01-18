@@ -41,7 +41,7 @@ namespace AkaShop.AdminApp.Controllers
         public IActionResult Language(NavigationViewModel navigationViewModel)
         {
             HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, navigationViewModel.CurrenLangugeId);
-            return RedirectToAction("Index");
+            return Redirect(navigationViewModel.ReturnUrl);
         }
     }
 }

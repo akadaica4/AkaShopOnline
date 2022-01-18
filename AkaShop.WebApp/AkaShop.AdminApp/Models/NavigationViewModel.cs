@@ -11,5 +11,7 @@ namespace AkaShop.AdminApp.Models
         public List<LanguageViewModel> Languages { get; set; }
 
         public string CurrenLangugeId { get; set; }
+
+        public string ReturnUrl { get; set; }
     }
 }

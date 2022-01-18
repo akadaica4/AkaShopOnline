@@ -1,6 +1,7 @@
 ﻿using AkaShop.Data.Entities;
 using AkaShop.Data.EntityFramework;
 using AkaShop.Domain.Common;
+using AkaShop.Utilities.Constants;
 using AkaShop.Utilities.Exceptions;
 using AkaShop.ViewModel.Catalog.Products;
 using AkaShop.ViewModel.Catalog.Products.ProductImages;
@@ -57,6 +58,34 @@ namespace AkaShop.Domain.Catalog.Products
 
         public async Task<int> Create(ProductCreateRequest request)
         {
+            var languages = context.Languages;
+            var translations = new List<ProductTranslation>();
+            foreach (var language in languages)
+            {
+                if (language.Id == request.LanguageId)
+                {
+                    translations.Add(new ProductTranslation()
+                    {
+                            Name = request.Name,
+                            Description = request.Description,
+                            Details = request.Details,
+                            SeoDescription = request.SeoDescription,
+                            SeoAlias = request.SeoAlias,
+                            SeoTitle = request.SeoTitle,
+                            LanguageId = request.LanguageId
+                    });
+                }
+                else
+                {
+                    translations.Add(new ProductTranslation()
+                    {
+                        Name = SystemConstants.ProductConstnats.NA,
+                        Description = SystemConstants.ProductConstnats.NA,
+                        SeoAlias = SystemConstants.ProductConstnats.NA,
+                        LanguageId = language.Id
+                    });
+                }
+            }
             var product = new Product()
             {
                 Price = request.Price,
@@ -64,19 +93,7 @@ namespace AkaShop.Domain.Catalog.Products
                 Stock = request.Stock,
                 ViewCount = 0,
                 DateCreated = DateTime.Now,
-                ProductTranslations = new List<ProductTranslation>()
-                {
-                    new ProductTranslation()
-                    {
-                        Name = request.Name,
-                        Description = request.Description,
-                        Details  = request.Details,
-                        SeoDescription = request.SeoDescription,
-                        SeoAlias = request.SeoAlias,
-                        SeoTitle = request.SeoTitle,
-                        LanguageId = request.LanguageId
-                    }
-                }
+                ProductTranslations = translations
             };
             //Save Image
             if(request.ThumbnailImage != null)
@@ -145,11 +162,11 @@ namespace AkaShop.Domain.Catalog.Products
                     Name = x.pt.Name,
                     DateCreated = x.p.DateCreated,
                     Description = x.pt.Description,
-                    Details = x.pt.Details,
-                    LanguageId = x.pt.LanguageId,
+                    Details =x.pt.Details,
+                    LanguageId =  x.pt.LanguageId,
                     OriginalPrice = x.p.OriginalPrice,
                     Price = x.p.Price,
-                    SeoAlias = x.pt.SeoAlias,
+                    SeoAlias =x.pt.SeoAlias,
                     SeoDescription = x.pt.SeoDescription,
                     SeoTitle = x.pt.SeoTitle,
                     Stock = x.p.Stock,
@@ -193,7 +210,7 @@ namespace AkaShop.Domain.Catalog.Products
             return await context.SaveChangesAsync();
         }
 
-        public async Task<int> Update(ProductUpdateRequest request)
+        public async Task<int> Update( ProductUpdateRequest request)
         {
             var product = await context.Products.FindAsync(request.Id);
             var productTranslation =await context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == request.Id && x.LanguageId == request.LanguageId);
@@ -208,13 +225,13 @@ namespace AkaShop.Domain.Catalog.Products
             productTranslation.Description = request.Description;
             productTranslation.Details = request.Details;
             //Save Image
-            if (request.ThumnailImage != null)
+            if (request.ThumbnailImage != null)
             {
                 var thumbnailImage = await context.ProductImages.FirstOrDefaultAsync(i => i.IsDefault == true && i.ProductId == request.Id);
                 if(thumbnailImage != null)
                 {
-                    thumbnailImage.FileSize = request.ThumnailImage.Length;
-                    thumbnailImage.ImagePath = await this.SaveFile(request.ThumnailImage);
+                    thumbnailImage.FileSize = request.ThumbnailImage.Length;
+                    thumbnailImage.ImagePath = await this.SaveFile(request.ThumbnailImage);
                     context.ProductImages.Update(thumbnailImage);
                 }
             }

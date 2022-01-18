@@ -443,3 +443,4 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreap
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreapp3.1\AkaShop.Data.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreapp3.1\AkaShop.Data.pdb
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
