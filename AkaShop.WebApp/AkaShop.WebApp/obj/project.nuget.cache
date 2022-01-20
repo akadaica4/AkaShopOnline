@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dKivdwsHjYTvKfy0RBwuONnEq62sDOXJyx/awsdF5l3A86pPxvMDlwjjFp/C8xxkCgbw4dor0X6g1esme2raLg==",
+  "dgSpecHash": "rO3Vdnt8AJu9ZcmuTlliA3hBu3RVvXWcsiAYw8cY9RGLQlVsUz3/EkRuMcB1kWTIQx5gkoIOqWXUl+u7Er2Q8A==",
   "success": true,
   "projectFilePath": "D:\\ProjectSolo\\AkaShopOnline\\AkaShop.WebApp\\AkaShop.WebApp\\AkaShop.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.6\\fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.6\\fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\lazziya.expresslocalization\\4.0.4\\lazziya.expresslocalization.4.0.4.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\lazziya.taghelpers\\6.0.1\\lazziya.taghelpers.6.0.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.22\\microsoft.aspnetcore.cryptography.internal.3.1.22.nupkg.sha512",

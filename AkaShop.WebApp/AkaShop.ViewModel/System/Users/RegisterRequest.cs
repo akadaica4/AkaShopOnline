@@ -25,6 +25,6 @@ namespace AkaShop.ViewModel.System.Users
         public string Password { get; set; }
         [Display(Name = "Xác nhận mật khẩu")]
         [DataType(DataType.Password)]
-        public string ConfirnPassword { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 }

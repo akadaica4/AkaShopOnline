@@ -18,7 +18,7 @@ namespace AkaShop.ViewModel.System.Users
             RuleFor(x => x.Password).NotEmpty().WithMessage("mật khẩu là bắt buộc")
                 .MinimumLength(6).WithMessage("Mật khẩu phải có ít nhất 6 ký tự");
             RuleFor(x => x).Custom((request, context) => {
-                if (request.Password != request.ConfirnPassword)
+                if (request.Password != request.ConfirmPassword)
                 {
                     context.AddFailure("Nhập lại mật khẩu không đúng");
                 }

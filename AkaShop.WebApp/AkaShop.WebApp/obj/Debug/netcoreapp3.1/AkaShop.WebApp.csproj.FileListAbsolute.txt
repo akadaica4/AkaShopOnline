@@ -444,3 +444,8 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\SideBar\Default.cshtml.g.cs
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\Detail.cshtml.g.cs
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\Category.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Pager\Default.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs

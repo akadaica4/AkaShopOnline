@@ -319,6 +319,8 @@ namespace AkaShop.Domain.Catalog.Products
                              where pic.ProductId == productId && ct.LanguageId == languageId
                              select ct.Name).ToListAsync();
 
+            var image = await context.ProductImages.Where(x => x.ProductId == productId && x.IsDefault == true).FirstOrDefaultAsync();
+
             var productViewModel = new ProductViewModel()
             {
                 Id = product.Id,
@@ -334,7 +336,8 @@ namespace AkaShop.Domain.Catalog.Products
                 SeoTitle = productTranslation != null ? productTranslation.SeoTitle : null,
                 Stock = product.Stock,
                 ViewCount = product.ViewCount,
-                Categories = categories
+                Categories = categories,
+                ThumbnailImge = image != null ? image.ImagePath : "no-image.jpg"
             };
             return productViewModel;
         }

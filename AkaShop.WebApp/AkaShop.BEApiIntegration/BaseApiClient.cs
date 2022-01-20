@@ -61,5 +61,23 @@ namespace AkaShop.BEApiIntegration
             }
             throw new Exception(body);
         }
+
+        public async Task<bool> Delete(string url)
+        {
+            var sessions = httpContextAccessor
+               .HttpContext
+               .Session
+               .GetString(SystemConstants.AppSettings.Token);
+            var client = httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+            var response = await client.DeleteAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

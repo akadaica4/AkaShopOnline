@@ -23,5 +23,7 @@ namespace AkaShop.BEApiIntegration
 
 
         Task<bool> UpdateProduct(ProductUpdateRequest request);
+
+        Task<bool> DeleteProduct(int id);
     }
 }
