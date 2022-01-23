@@ -84,6 +84,14 @@ namespace AkaShop.AdminApp.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
+            var result = await productApiClient.GetById(id,languageId);
+            return View(result);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CategoryAssign(CategoryAssignRequest request)
         {

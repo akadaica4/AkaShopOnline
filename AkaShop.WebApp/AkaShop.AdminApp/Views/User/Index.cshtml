@@ -90,10 +90,18 @@
                                     @Html.DisplayFor(modelItem => item.Email)
                                 </td>
                                 <td>
-                                    @Html.ActionLink("Sửa", "Edit", new { id = item.Id })
-                                    @Html.ActionLink("Xem", "Details", new { id = item.Id })
-                                    @Html.ActionLink("Xóa", "Delete", new { id = item.Id })
-                                    @Html.ActionLink("Gán quyền", "RoleAssign", new { id = item.Id })
+                                    <a class="btn btn-success btn-sm text-white" asp-controller="User" asp-action="Edit" asp-route-Id="@item.Id">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a class="btn btn-warning btn-sm text-white" asp-controller="User" asp-action="Details" asp-route-Id="@item.Id" >
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm text-white" asp-controller="User" asp-action="Delete" asp-route-Id="@item.Id" >
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                    <a class="btn btn-dark btn-sm text-white" asp-controller="User" asp-action="RoleAssign" asp-route-Id="@item.Id" >
+                                        Gán Quyền
+                                    </a>
                                 </td>
                             </tr>
                         }

@@ -121,6 +121,14 @@
     <value>Thêm vào</value>
     <comment>Common</comment>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+    <comment>/checkout</comment>
+  </data>
+  <data name="ALREADY REGISTERED" xml:space="preserve">
+    <value>Đã đăng ký</value>
+    <comment>/Login</comment>
+  </data>
   <data name="Available Product" xml:space="preserve">
     <value>Sản phẩm có sẵn</value>
     <comment>/Product/Category</comment>
@@ -133,6 +141,14 @@
     <value>Liên Hệ</value>
     <comment>Layouts</comment>
   </data>
+  <data name="Continue Shopping" xml:space="preserve">
+    <value>Tiếp tục mua sắm</value>
+    <comment>/order</comment>
+  </data>
+  <data name="CREATE YOUR ACCOUNT" xml:space="preserve">
+    <value>Tạo tài khoản của bạn</value>
+    <comment>/Login</comment>
+  </data>
   <data name="Delivery" xml:space="preserve">
     <value>Giao Hàng</value>
     <comment>Layouts</comment>
@@ -141,13 +157,25 @@
     <value>Tiếng Anh</value>
     <comment>Layouts</comment>
   </data>
+  <data name="ESTIMATE YOUR SHIPPING" xml:space="preserve">
+    <value>Thông tin vận chuyển của bạn</value>
+    <comment>/Checkout</comment>
+  </data>
   <data name="Featured Products" xml:space="preserve">
     <value>Sản phẩm nổi bật</value>
     <comment>/Home/Index</comment>
   </data>
+  <data name="Forget password" xml:space="preserve">
+    <value>Quên mật khẩu</value>
+    <comment>/login</comment>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
     <comment>Common</comment>
+  </data>
+  <data name="Itemes in your cart" xml:space="preserve">
+    <value>Sản phẩm trong giỏ hàng</value>
+    <comment>/Layouts</comment>
   </data>
   <data name="Latest Products" xml:space="preserve">
     <value>Sản phẩm mới nhất</value>
@@ -165,6 +193,10 @@
     <value>Xem thêm chi tiết</value>
     <comment>Common</comment>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Tên</value>
+    <comment>/checkout</comment>
+  </data>
   <data name="New | Available" xml:space="preserve">
     <value>Có sẵn </value>
     <comment>Common</comment>
@@ -172,6 +204,14 @@
   <data name="Page" xml:space="preserve">
     <value>Trang</value>
     <comment>Common</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+    <comment>/login</comment>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Số điện thoại</value>
+    <comment>/checkout</comment>
   </data>
   <data name="Product Details" xml:space="preserve">
     <value>Chi tiết sản phẩm</value>
@@ -185,6 +225,14 @@
     <value>san-pham</value>
     <comment>Layouts</comment>
   </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>Mua hàng</value>
+    <comment>/Checkour</comment>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Đăng ký</value>
+    <comment>/Register</comment>
+  </data>
   <data name="Related Products" xml:space="preserve">
     <value>Sản phẩm liên quan</value>
     <comment>/Product/Detail</comment>
@@ -197,6 +245,10 @@
     <value>Khuyến mãi</value>
     <comment>Layout</comment>
   </data>
+  <data name="User Name" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+    <comment>/login</comment>
+  </data>
   <data name="Vietnamese" xml:space="preserve">
     <value>Tiếng Việt</value>
     <comment>Layout</comment>
@@ -208,5 +260,13 @@
   <data name="View details" xml:space="preserve">
     <value>Xem chi tiết</value>
     <comment>/Product/Category</comment>
+  </data>
+  <data name="You are not have account" xml:space="preserve">
+    <value>Bạn chưa có tài khoản</value>
+    <comment>/login</comment>
+  </data>
+  <data name="Your personal information" xml:space="preserve">
+    <value>Thông tin cá nhân của bạn</value>
+    <comment>Common</comment>
   </data>
 </root>

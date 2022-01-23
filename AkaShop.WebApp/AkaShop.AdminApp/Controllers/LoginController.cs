@@ -40,7 +40,7 @@ namespace AkaShop.AdminApp.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(ModelState);
+                return View();
             }
             var result = await userApiClient.Authenticate(request);
             if(result.ResultObj == null)
@@ -52,7 +52,7 @@ namespace AkaShop.AdminApp.Controllers
             var authProperties = new AuthenticationProperties
             {
                 ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
-                IsPersistent = false
+                IsPersistent = true
             };
             HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, configuration[SystemConstants.AppSettings.DefaultLanguageId]);
             HttpContext.Session.SetString(SystemConstants.AppSettings.Token, result.ResultObj);

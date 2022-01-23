@@ -41,6 +41,7 @@ namespace AkaShop.AdminApp.Controllers
         }
 
         [HttpGet]
+        [Route("User/Details/{Id}")]
         public async Task<IActionResult> Details(Guid id)
         {
             var result = await userApiClient.GetById(id);
@@ -71,6 +72,7 @@ namespace AkaShop.AdminApp.Controllers
         }
 
         [HttpGet]
+        [Route("User/Edit/{Id}")]
         public async Task<IActionResult> Edit(Guid id)
         {
             var result = await userApiClient.GetById(id);
@@ -119,6 +121,7 @@ namespace AkaShop.AdminApp.Controllers
         }
 
         [HttpGet]
+        [Route("User/Delete/{Id}")]
         public IActionResult Delete(Guid id)
         {
             return View(new UserDeleteRequest() 
@@ -145,6 +148,7 @@ namespace AkaShop.AdminApp.Controllers
         }
 
         [HttpGet]
+        [Route("User/RoleAssign/{Id}")]
         public async Task<IActionResult> RoleAssign(Guid id)
         {
             var roleAssignRequest = await GetRoleAssignRequest(id);

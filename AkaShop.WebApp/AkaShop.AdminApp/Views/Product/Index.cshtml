@@ -1,6 +1,7 @@
 ﻿@using AkaShop.ViewModel.Common;
+@using System.Globalization
 @model PageResult<AkaShop.ViewModel.Catalog.Products.ProductViewModel>
-
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
 @{
     ViewData["Title"] = "Danh sách sản phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,7 +11,16 @@
         setTimeout(function () {
             $('#msgAlert').fadeOut('slow');
         }, 2000);
+
+
     </script>
+}
+@{
+    string currencyFormat(decimal number)
+    {
+        var info = CultureInfo.GetCultureInfo("vi-VN");
+        return String.Format(info, "{0:C0}", number);
+    }
 }
 <div class="container-fluid px-4">
     <h1 class="mt-4">Danh sách sản phẩm</h1>
@@ -72,35 +82,49 @@
                             <th>
                                 Số lượng tồn
                             </th>
+                            <th>
+                                Hình ảnh
+                            </th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model.Items)
                         {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Id)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.OriginalPrice)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Price)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Stock)
-                            </td>
-                            <td>
-                                @Html.ActionLink("Sửa", "Edit", new { id = item.Id })
-                                @Html.ActionLink("Xem", "Details", new { id = item.Id })
-                                @Html.ActionLink("Xóa", "Delete", new { id = item.Id })
-                                @Html.ActionLink("Gán danh mục", "CategoryAssign", new { id = item.Id })
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @currencyFormat(item.OriginalPrice)
+                                </td>
+                                <td>
+                                    @currencyFormat(item.Price)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Stock)
+                                </td>
+                                <td>
+                                    <img src="@(Configuration["BaseAddress"] + item.ThumbnailImge)" style="width:100px;height:120px" />
+                                </td>
+                                <td>
+                                    <a class="btn btn-success btn-sm text-white" asp-controller="Product" asp-action="Edit" asp-route-Id="@item.Id">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a class="btn btn-warning btn-sm text-white" asp-controller="Product" asp-action="Details" asp-route-Id="@item.Id">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm text-white" asp-controller="Product" asp-action="Delete" asp-route-Id="@item.Id">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                    <a class="btn btn-dark btn-sm text-white" asp-controller="Product" asp-action="CategoryAssign" asp-route-Id="@item.Id">
+                                        Gán Danh Mục
+                                    </a>
+                                </td>
+                            </tr>
                         }
                     </tbody>
                 </table>

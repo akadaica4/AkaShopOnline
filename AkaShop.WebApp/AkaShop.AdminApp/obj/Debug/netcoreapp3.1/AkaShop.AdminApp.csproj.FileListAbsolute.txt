@@ -445,3 +445,4 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreap
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\bin\Debug\netcoreapp3.1\AkaShop.Data.pdb
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\Delete.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.AdminApp\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs

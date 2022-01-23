@@ -450,3 +450,4 @@ D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+D:\ProjectSolo\AkaShopOnline\AkaShop.WebApp\AkaShop.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Checkout.cshtml.g.cs
