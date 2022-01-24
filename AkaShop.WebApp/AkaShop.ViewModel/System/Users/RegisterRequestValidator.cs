@@ -15,8 +15,7 @@ namespace AkaShop.ViewModel.System.Users
             RuleFor(x => x.Email).NotEmpty().WithMessage("Email là bắt buộc").Matches(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").WithMessage("Định dạng email không khớp");
             RuleFor(x => x.PhoneNumber).NotEmpty().WithMessage("Số điện thoại là bắt buộc");
             RuleFor(x => x.UserName).NotEmpty().WithMessage("Tên người dùng là bắt buộc");
-            RuleFor(x => x.Password).NotEmpty().WithMessage("mật khẩu là bắt buộc")
-                .MinimumLength(6).WithMessage("Mật khẩu phải có ít nhất 6 ký tự");
+            RuleFor(x => x.Password).NotEmpty().WithMessage("mật khẩu là bắt buộc").Matches(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{6,15}$").WithMessage("Mật khẩu có phải có tối thiểu là 6 ký tự, có ký tự đặc biệt và số");
             RuleFor(x => x).Custom((request, context) => {
                 if (request.Password != request.ConfirmPassword)
                 {

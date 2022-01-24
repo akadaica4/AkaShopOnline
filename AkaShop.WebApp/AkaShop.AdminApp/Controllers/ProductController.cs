@@ -23,7 +23,7 @@ namespace AkaShop.AdminApp.Controllers
             this.configuration = configuration;
             this.categoryApiClient = categoryApiClient;
         }
-        public async Task<IActionResult> Index(string keyword,int? categoryId, int pageIndex = 1, int pageSize = 10)
+        public async Task<IActionResult> Index(string keyword,int? categoryId, int pageIndex = 1, int pageSize = 3)
         {
             var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
             var request = new GetManageProductPaginRequest()

@@ -23,7 +23,7 @@ namespace AkaShop.AdminApp.Controllers
             this.configuration = configuration;
             this.roleApiClient = roleApiClient;
         }
-        public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 10)
+        public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 3)
         {
             var request = new GetUserPagingRequest()
             {

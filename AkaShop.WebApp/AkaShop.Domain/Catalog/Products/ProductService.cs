@@ -93,7 +93,8 @@ namespace AkaShop.Domain.Catalog.Products
                 Stock = request.Stock,
                 ViewCount = 0,
                 DateCreated = DateTime.Now,
-                ProductTranslations = translations
+                ProductTranslations = translations,
+                IsFeatured = true
             };
             //Save Image
             if(request.ThumbnailImage != null)
@@ -338,6 +339,7 @@ namespace AkaShop.Domain.Catalog.Products
                 ViewCount = product.ViewCount,
                 Categories = categories,
                 ThumbnailImge = image != null ? image.ImagePath : "no-image.jpg"
+
             };
             return productViewModel;
         }
